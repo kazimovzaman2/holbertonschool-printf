@@ -2,15 +2,17 @@
 #include <stdarg.h>
 #include <string.h>
 #include <unistd.h>
+#include <stdlib.h>
+#include "main.h"
 /**
  *_printf - printf
  *@format: A list of types of arguments passed to the function
  *
  *Return - integer
  */
-int _printf(const char *format, ...) 
+int _printf(const char *format, ...)
 {
-	int i = 0
+	int i = 0;
 	int len = 0;
 	va_list ptr;
 
