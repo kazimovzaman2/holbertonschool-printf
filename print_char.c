@@ -9,6 +9,6 @@
  */
 void print_char(va_list ptr, int *len)
 {
-    _putchar(va_arg(ptr, int));
-    (*len)++;
+	_putchar(va_arg(ptr, int));
+	(*len)++;
 }

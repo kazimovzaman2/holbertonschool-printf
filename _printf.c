@@ -9,7 +9,7 @@
  * _printf - Custom printf function
  * @format: A list of types of arguments passed to the function
  *
- * Return - integer
+ * Return: integer
  */
 int _printf(const char *format, ...)
 {
@@ -39,6 +39,12 @@ int _printf(const char *format, ...)
 			else if (format[i + 1] == '\0')
 			{
 				continue;
+			}
+			else
+			{
+				_putchar('%');
+				_putchar(format[i + 1]);
+				len += 2;
 			}
 			i++;
 		}
