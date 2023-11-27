@@ -9,10 +9,18 @@
  */
 int main(void)
 {
+	int len, len2;
 
-    _printf("Character:[%c]\n", 'H');
-    printf("Character:[%c]\n", 'H');
-    _printf("String:[%s]\n", "I am a string !");
-    printf("String:[%s]\n", "I am a string !");
-    return (0);
+	len = _printf("%");
+	len2 = printf("%");
+	fflush(stdout);
+	printf("%d\n", len);
+	printf("%d\n", len2);
+	if (len != len2)
+	{
+		printf("Lengths differ.\n");
+		fflush(stdout);
+		return (1);
+	}
+	return (0);
 }

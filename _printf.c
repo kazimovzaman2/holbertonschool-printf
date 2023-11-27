@@ -5,8 +5,6 @@
 #include "main.h"
 
 
-
-
 /**
  * _printf - Custom printf function
  * @format: A list of types of arguments passed to the function
@@ -15,7 +13,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, len = 0;
+	int i, len = 0;
 	va_list ptr;
 
 	va_start(ptr, format);
@@ -25,7 +23,7 @@ int _printf(const char *format, ...)
 		exit(98);
 	}
 
-	while (format[i] != '\0')
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
@@ -38,6 +36,10 @@ int _printf(const char *format, ...)
 				_putchar('%');
 				len++;
 			}
+			else if (format[i + 1] == '\0')
+			{
+				continue;
+			}
 			i++;
 		}
 		else
@@ -45,7 +47,6 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			len++;
 		}
-		i++;
 	}
 
 	va_end(ptr);
