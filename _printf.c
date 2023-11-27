@@ -17,7 +17,6 @@ int _printf(const char *format, ...)
 	va_list ptr;
 
 	va_start(ptr, format);
-
 	if (!format)
 	{
 		exit(98);
@@ -37,9 +36,7 @@ int _printf(const char *format, ...)
 				len++;
 			}
 			else if (format[i + 1] == '\0')
-			{
 				continue;
-			}
 			else
 			{
 				_putchar('%');
@@ -54,8 +51,8 @@ int _printf(const char *format, ...)
 			len++;
 		}
 	}
-
+	if (len == 0)
+		return (-1);
 	va_end(ptr);
-
 	return (len);
 }
