@@ -9,7 +9,7 @@
  */
 void print_decimal(va_list ptr, int *len)
 {
-	int i = 1;
+	unsigned int i = 1;
 	int number = va_arg(ptr, int);
 
 	if (number < 0)
