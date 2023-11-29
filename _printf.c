@@ -32,23 +32,19 @@ int _printf(const char *format, ...)
 			else if (format[i + 1] == '%')
 			{
 				_putchar('%');
-				len++;
-			}
+				len++; }
 			else if (format[i + 1] == '\0')
 				continue;
 			else
 			{
 				_putchar('%');
 				_putchar(format[i + 1]);
-				len += 2;
-			}
-			i++;
-		}
+				len += 2; }
+			i++; }
 		else
 		{
 			_putchar(format[i]);
-			len++;
-		}
+			len++; }
 	}
 	if (len == 0)
 		return (-1);
