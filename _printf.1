@@ -44,3 +44,38 @@ Prints a literal '%' character.
 On success, the function returns the total number of characters written.
 On failure, -1 is returned if no characters are written.
 
+.SH EXAMPLES
+.PP
+CODE:
+.B _printf("Displaying a straightforward sentence.\n");
+.PP
+OUTPUT:
+Displaying a straightforward sentence.
+(newline character included!)
+This code snippet yields the length of the output (31)
+
+.PP
+CODE:
+.B _printf("%s", "This sentence is extracted from va_args!\n");
+.PP
+OUTPUT:
+This sentence is extracted from va_args!
+(newline character included!)
+This code snippet yields the length of the output (41)
+
+.SH SEE ALSO
+.BR printf(3),
+.BR man(1)
+
+.SH AUTHOR
+Mahammadsaleh Abbas
+Zaman Kazimov
+
+.SH BUGS
+None
+
+.SH COPYRIGHT
+Copyright Owner
+
+.SH NOTES
+The notes is the same as main printf.
