@@ -1,0 +1,46 @@
+.TH _PRINTF 3 "November 2023" "Your Project Name"
+.SH NAME
+_printf \- generates output based on a specified format
+
+.SH SYNOPSIS
+.B #include <stdio.h>
+.B #include <stdarg.h>
+.B #include <unistd.h>
+.B #include <stdlib.h>
+.B #include "main.h"
+.PP
+.B int _printf(const char *format, ...);
+.PP
+("String");
+.PP
+("%[c]...", 'data');
+.PP
+("%[s]...", "data");
+.PP
+("%[d]...", data(numerals));
+.PP
+("%[i]...", data(numerals));
+
+.SH DESCRIPTION
+The \fB_printf\fR function is a custom implementation of the printf function.
+It accepts a format string and a variable number of arguments based on the
+conversion specifiers present in the format string.
+.PP
+Supported conversion specifiers:
+.TP
+\fB%c\fR
+Prints a single character.
+.TP
+\fB%s\fR
+Prints a null-terminated string.
+.TP
+\fB%d, %i\fR
+Prints a signed decimal integer.
+.TP
+\fB%%\fR
+Prints a literal '%' character.
+
+.SH RETURN VALUE
+On success, the function returns the total number of characters written.
+On failure, -1 is returned if no characters are written.
+
