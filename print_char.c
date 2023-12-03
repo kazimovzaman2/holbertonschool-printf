@@ -1,7 +1,6 @@
 #include <stdarg.h>
 #include "main.h"
 
-
 /**
  * print_char - Prints a character
  * @ptr: Pointer to the va_list containing the character
