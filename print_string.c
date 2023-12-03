@@ -3,7 +3,6 @@
 #include <unistd.h>
 #include "main.h"
 
-
 /**
  * print_string - Prints a string
  * @ptr: Pointer to the va_list containing the string
