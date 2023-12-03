@@ -6,6 +6,25 @@ This repository contains an implementation of the _printf function, which genera
 ## Function Signature
 ```int _printf(const char *format, ...);```
 
+## Execution Instructions
+To execute the _printf function in your program, follow these steps:
+1. Include the Header File:
+Include the header file "your_header_file.h" in your source file, where you intend to use the _printf function.
+```#include "your_header_file.h"```
+2. Call the _printf Function:
+Use the _printf function in your code with the desired format specifier and arguments. Here's an example:
+```
+int main(void) {
+    _printf("Displaying a straightforward sentence.\n");
+    return 0;
+}
+```
+3. Compile Your Code:
+Compile your source code, linking it with the implementation files. For example, if your source file is "main.c" and the implementation files are "print_char.c," "print_string.c," "print_decimal.c," and "your_header_file.h," you can compile using:
+```gcc -o your_program main.c print_char.c print_string.c print_decimal.c```
+4. Run Your Executable:
+```./your_program```
+
 ## Usage
 ### Basic Example
 ```
